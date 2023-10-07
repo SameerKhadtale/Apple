@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+.navbar{
+    position: sticky;
+    top:0px;
+    background-color: hsl(0, 0%, 7%,0.8);
+    color: white;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.navbar ul li {
+    list-style: none;
+    padding: 10px;
+    font-size: 12px;
+    color: rgb(211, 210, 210);
+}
+
+#screen{
+    width: 100%;
+    height: auto;
+}
+
+.content-container{
+    height: auto;
+    /* background-color: grey; */
+}
+
+.iphone15pro{
+    height: 600px;
+    width: 100vw;
+    background-image: url('https://www.apple.com/v/home/be/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_large_2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.iphone15pro h1{
+    font-size: 50px;
+}
+.iphone15pro p{
+ font-size: 30px;
+ font-weight: 500;
+}
+
+.btn{
+    /* padding: 5px; */
+    font-size: 20px;
+    color: rgb(128, 128, 248);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    margin-top: 15px;
+
+}
+
+.iphone15pro-2 {
+    height: 600px;
+    width: 100vw;
+    background-image: url('https://www.apple.com/v/home/be/images/heroes/iphone-15/hero_iphone15_announce__uuemlcwczn6u_large_2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding-top: 50px;
+    margin-top: 10px;
+}
+
+.iphone15pro-2 h1{
+    font-size: 50px;
+}
+.iphone15pro-2 p{
+ font-size: 30px;
+ font-weight: 500;
+}
+
+.iwatch{
+    height: 600px;
+    width: 100vw;
+    background-image: url('https://www.apple.com/v/home/be/images/heroes/apple-watch-series-9/hero_apple_watch_series_9_order__d0fi9mb84dci_large_2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: rgb(248, 245, 245);
+    padding-top: 50px;
+    margin-top: 10px; 
+}
+
+.iwatch p{
+    font-size: 30px;
+    font-weight: 500;
+   }
+
+
+#iwatch-img{
+    width: 200px;
+    margin-bottom: 20px;
+}
