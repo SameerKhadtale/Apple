@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <nav className='navbar'>
         <ul>
-            <li><i class="fa-brands fa-apple"></i></li>
-            <li>Store</li>
+            <li onClick={()=>{navigate('/')}}><i class="fa-brands fa-apple"></i></li>
+            <li onClick={()=>{navigate('/store')}}>Store</li>
             <li>Mac</li>
             <li>iPad</li>
             <li>iPhone</li>
