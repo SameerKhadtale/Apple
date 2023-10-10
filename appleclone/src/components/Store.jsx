@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarStore from './NavbarStore'
 import ContentSlide from './ContentSlide'
+import ContentSlideTwo from './ContentSlideTwo'
 const Store = () => {
 
     return (
@@ -70,6 +71,19 @@ const Store = () => {
             <div className='title'><p><span>The latest. </span>Take a look at what’s new, right now.</p></div>
 
            <ContentSlide/>
+           <div className='title'><p><span>The latest. </span>Take a look at what’s new, right now.</p></div>
+            <ContentSlideTwo/>
+
+            <div className='quick-link-container'>
+                <h2 className='quick-link'><span>Quick</span> Links</h2>
+               <div>
+               <button className="quick-link-btn">Order Status</button>
+                <button className="quick-link-btn">Shopping Help</button>
+                <button className="quick-link-btn">Returns</button>
+                <button className="quick-link-btn">Your Saves</button>
+               </div>
+            </div>
+       
         </div >
     )
 }
