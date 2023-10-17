@@ -26,6 +26,28 @@
     font-size: 12px;
     color: rgb(211, 210, 210);
 }
+
+.navbar-two{
+    
+    top:0px;
+    background-color: hsl(0, 0%, 7%,0.8);
+    color: white;
+    z-index: 5;
+}
+
+.navbar-two ul{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.navbar-two ul li {
+    list-style: none;
+    padding: 10px;
+    font-size: 12px;
+    color: rgb(211, 210, 210);
+}
 .navbar-2{
     /* position: sticky; */
     /* top:0px; */
@@ -67,6 +89,7 @@
     background-position: center;
     color: white;
     padding-top: 50px;
+    cursor: pointer;
 }
 
 .iphone15pro h1{
@@ -237,10 +260,12 @@
     padding-top: 40px;
 }
 
-.slider-content{
+.slider-content-home{
     width: 100%;
     height: auto;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: center;
     scroll-behavior: smooth;
 }
@@ -536,4 +561,91 @@
 
 .quick-link-btn:hover{
     background-color: rgb(231, 231, 231);
+}
+
+#Iphone15pro-page{
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 0%);
+}
+
+/* hsl(37, 11%, 71%) */
+
+.buy-btn{
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color:hsl(210, 100%, 47%);
+    color: white;
+    font-weight: 400;
+    margin: 20px 0px;
+}
+
+.highlight{
+    height: 300px;
+    width: 100%;
+    background-color: hsl(0, 0%, 6%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 20px ;
+    margin-top: 80px;
+}
+
+.highlight-left{
+    width: 45%;
+    height: 40%;
+    /* border: 1px solid white; */
+    
+}
+
+.highlight-right{ 
+    width: 45%;
+    height: 40%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-end;
+     }
+
+.watch-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(110, 110, 255);
+    font-size: 20px;
+    margin: 30px 20px;
+    
+}
+
+
+.carousel-inner{
+    width: 20%;
+    margin: auto;
+}
+
+.carousel{
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flex-grid-images{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+    margin: auto;
+    /* border: 1px solid yellow; */
+}
+
+.pro15imgs1{
+    width: 95%;
+    height: 500px;
+    object-fit: 100% ;
+    margin-bottom: 20px;
+}
+.pro15imgs2, .pro15imgs3{
+    width: 47%;
 }

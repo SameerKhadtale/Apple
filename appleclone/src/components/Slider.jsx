@@ -2,7 +2,7 @@ import React from 'react'
 
 const Slider = () => {
     return (
-        <div className='slider-content'>
+        <div className='slider-content-home'>
             <div className='slider-content-box'>
                 <div><img src="./img-1.png" alt="" id='img-1' /></div>
                 <div><img src="./img-2.png" alt="" id="img-2" /></div>

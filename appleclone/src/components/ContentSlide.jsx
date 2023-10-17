@@ -2,8 +2,8 @@
 
 const ContentSlide = () => {
     // const [onClickActive , isOnclickActive] = useState(true)
-    
-    
+
+
     // const buttonClass = onClickActive ? "move-left" : ''
     // const containerId = "toLeft"
     return (
@@ -20,12 +20,12 @@ const ContentSlide = () => {
                 <div><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-airpods-pro-202209?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1661016986712" alt="" className="content-slide-box" /></div>
                 <div><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-macbook-air-202306?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1683844828182" alt="" className="content-slide-box" /></div>
                 <div><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-ipad-air-202203?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1645636337374" alt="" className="content-slide-box" /></div>
-                
+
                 <div className="move-btn"><i class="fa-solid fa-chevron-right"></i></div>
 
             </div>
 
-            
+
 
         </>
     )
