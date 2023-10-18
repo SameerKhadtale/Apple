@@ -7,8 +7,10 @@
 
 .navbar{
     position: sticky;
+    height: 50px;
     top:0px;
     background-color: hsl(0, 0%, 7%,0.8);
+    /* border: 1px solid yellow; */
     color: white;
     z-index: 5;
 }
@@ -17,15 +19,89 @@
     display: flex;
     justify-content: space-around;
     width: 80%;
+    height: 100%;
     margin: auto;
     /* border: 1px solid red; */
 }
 .navbar ul li {
     list-style: none;
-    padding: 10px;
+    align-items: center;
+    padding-top: 3px;
+    height: 100%;
+    /* padding: 10px; */
     font-size: 12px;
     color: rgb(211, 210, 210);
+    
+    /* border: 1px solid white; */
 }
+
+.Active-shopping{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 400px;
+    background-color:hsl(0, 0%, 7%) ;
+    color: white;
+    z-index: 8;
+    scale: 1;
+    transition: 200ms ease-in-out;
+}
+.Active-shopping-white{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 400px;
+    background-color:hsl(0, 0%, 100%) ;
+    color: rgb(34, 33, 33);
+    z-index: 8;
+    scale: 1;
+    transition: 200ms ease-in-out;
+}
+
+.inActive-shopping{
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    scale: 0;
+    inset: auto;
+    transition: 200ms ease-in-out;
+}
+
+.shopping-cart-content{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    /* right: 27%; */
+}
+
+.shopping-cart-content h6{
+    font-weight: normal;
+    font-size: 15px;
+    color: rgb(94, 94, 94);
+}
+
+.profile-list{
+    font-size: 13px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.profile-list i{
+    color: rgb(94, 94, 94);
+    margin-right: 15px;  
+}
+
+
+
+
+
+
+
 
 .navbar-two{
     
@@ -33,6 +109,9 @@
     background-color: hsl(0, 0%, 7%,0.8);
     color: white;
     z-index: 5;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-two ul{
@@ -73,9 +152,12 @@
 #screen{
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-container{
+    margin-top: -325px;
     height: auto;
     /* background-color: grey; */
 }
@@ -648,4 +730,87 @@
 }
 .pro15imgs2, .pro15imgs3{
     width: 47%;
+}
+
+.signin-page{
+    width: 100%;
+    overflow-x: hidden;
+}
+.signin-page h3{
+    margin-top: 50px;
+}
+.signin-head{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    padding: 30px 0px;
+
+}
+
+.signin-input-container{
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid hsl(240, 3%, 6%);
+    margin: auto;
+}
+
+.signin-input-container:hover,.signin-input-container:focus{
+    border: 3px solid hsl(210, 100%, 45%);
+}
+.signin-input-container>:nth-child(2){
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.input-email{
+ width: 350px;
+ height: 25px;
+ margin-bottom: 5px;
+ padding-left: 10px;
+ border: none;
+ outline: none;
+}
+
+.signin-input-container i {
+    font-size: 25px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+    color: rgb(146, 144, 144);
+}
+
+.rotate{
+    transform: rotate(-45deg);
+    font-size: 13px;
+}
+
+.blue{
+    color: hsl(210, 100%, 40%);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.create-id-form{
+    margin-top: -270px;
+}
+
+.create-id-head{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid rgb(177, 175, 175);
+}
+
+.create-id-head h3{
+width: 20%;
+/* border: 1px solid purple; */
+}
+
+.create-id-head button{
+    /* width: 60%; */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 20px;
+    font-size: 12px;
 }
