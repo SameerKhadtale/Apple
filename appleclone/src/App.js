@@ -9,6 +9,7 @@ import Carousal from './components/Carousal';
 import Signin from './components/Signin';
 import CreateAppleId from './components/CreateAppleId';
 import Cart from './components/Cart';
+import BuyIphone from './components/BuyIphone';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/signin' element={<Signin/>}/>
         <Route exact path='/create-id' element={<CreateAppleId/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
+        <Route exact path='/buy-iphone' element={<BuyIphone/>}/>
       </Routes>
     </div>
   );

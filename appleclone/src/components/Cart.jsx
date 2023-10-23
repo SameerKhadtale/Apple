@@ -9,7 +9,7 @@ const Cart = () => {
             <div className="cart-content-container">
                 <h1 style={{ textAlign: 'left' }}>Review your Bag</h1>
                 <p>Free delivery and free returns.</p>
-                <div className="highlight"><p style={{ width: "80%", fontSize: '14px' }}>Items not purchased with a one time payment may be eligible for $166.41/mo.per month at 0% APRfootnote◊ when you check out with Apple Card Monthly Installments. <span className="blue"> Learn more</span></p></div>
+                <div className="highlight-cart"><p style={{ width: "80%", fontSize: '14px' }}>Items not purchased with a one time payment may be eligible for $166.41/mo.per month at 0% APRfootnote◊ when you check out with Apple Card Monthly Installments. <span className="blue"> Learn more</span></p></div>
 
                 <div className="cart-product-details">
                     <div className="product-image">
@@ -88,8 +88,17 @@ const Cart = () => {
                     <div>How would you like to check out?</div>
                 </div>
                 <div className="product-details adjust-left flex">
-                    <div className="payment-blocks"></div>
-                    <div className="payment-blocks"></div>
+                    <div className="payment-blocks">
+                        <div><h5 style={{ textAlign: 'center', margin: "20px auto" }}>Pay Monthly with Apple Card $166.41/mo.* at 0% APR◊</h5></div>
+                        <div className="checkout-blue-container"><p style={{ textAlign: 'center', color: 'white', marginTop: '5px' }}>Check Out with Apple Card Monthly Installments</p></div>
+                        <div className="checkout-container-end"><p style={{ textAlign: 'center', marginTop: '5px' }}>
+                            $99.00 due today, which includes applicable full-price items, down payments, shipping, and taxes.</p>
+                        </div>
+                    </div>
+                    <div className="payment-blocks">
+                    <div><h5 style={{ textAlign: 'center', margin: "20px auto" }}>Pay Monthly with Apple Card $166.41/mo.* at 0% APR◊</h5></div>
+                        <div className="checkout-blue-container"><p style={{ textAlign: 'center', color: 'white', marginTop: '5px' }}>Check Out</p></div>
+                    </div>
                 </div>
 
             </div>

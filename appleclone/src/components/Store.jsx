@@ -2,8 +2,9 @@ import React from 'react'
 import NavbarStore from './NavbarStore'
 import ContentSlide from './ContentSlide'
 import ContentSlideTwo from './ContentSlideTwo'
+import { useNavigate } from 'react-router-dom'
 const Store = () => {
-
+    const navigate = useNavigate()
     return (
         <div className='store-content'>
             <NavbarStore />
@@ -36,7 +37,7 @@ const Store = () => {
                 <div><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-14-16-mac-nav-202301?wid=400&hei=260&fmt=png-alpha&.v=1670959891635" alt="" className="slide-imgs" />
                     <div>Mac</div>
                 </div>
-                <div><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202309_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1692971740190" alt="" className="slide-imgs" />
+                <div onClick={()=>navigate('/buy-iphone')}><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202309_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1692971740190" alt="" className="slide-imgs" />
                     <div>iPhone</div>
 
                 </div>

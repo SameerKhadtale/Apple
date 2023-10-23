@@ -2,7 +2,7 @@
 
 const ContentSlide = () => {
     // const [onClickActive , isOnclickActive] = useState(true)
-
+    
 
     // const buttonClass = onClickActive ? "move-left" : ''
     // const containerId = "toLeft"

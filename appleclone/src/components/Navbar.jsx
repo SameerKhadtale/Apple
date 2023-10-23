@@ -26,7 +26,7 @@ const Navbar = () => {
           <li>Entertainment</li>
           <li>Accessories</li>
           <li>Support</li>
-          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><i className="fa-solid fa-magnifying-glass"></i></li>
           <li onClick={HandleShoppingClick}><i className="fa-solid fa-cart-shopping"></i></li>
         </ul>
       </div>
@@ -37,10 +37,10 @@ const Navbar = () => {
           <h3>Your Bag is empty</h3>
           <p style={{marginTop:'15px' ,fontSize:'12px'}}><span style={{color:'rgb(128, 128, 248)',textDecoration:'underline'}}>signin</span> to see if you have any saved items</p>
           <h6>My Profile</h6>
-          <div className="profile-list"><i class="fa-solid fa-box"></i> Orders</div>
-          <div className="profile-list"><i class="fa-regular fa-bookmark"></i> Your Saves</div>
-          <div className="profile-list"><i class="fa-solid fa-circle-radiation"></i> Account</div>
-          <div className="profile-list" onClick={()=> navigate('/signin')}><i class="fa-regular fa-circle-user"></i> Signin</div>
+          <div className="profile-list"><i className="fa-solid fa-box"></i> Orders</div>
+          <div className="profile-list"><i className="fa-regular fa-bookmark"></i> Your Saves</div>
+          <div className="profile-list"><i className="fa-solid fa-circle-radiation"></i> Account</div>
+          <div className="profile-list" onClick={()=> navigate('/signin')}><i className="fa-regular fa-circle-user"></i> Signin</div>
         </div>
       </div>
     </>
