@@ -914,6 +914,7 @@ width: 20%;
     width: 100%;
     display: flex;
     overflow-x: scroll;
+    padding: 20px;
     
 }
 
@@ -925,6 +926,9 @@ width: 20%;
 
 .map-product-container{
     margin: 0px 20px;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 8px rgb(210, 206, 206);
+    border-radius: 8px;
 }
 
 .map-product-container h3{
@@ -934,10 +938,66 @@ width: 20%;
 .map-product-container img{
     width: 300px;
     height: 250px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .button{
+    padding: 5px 15px;
+    color: white;
+    background-color: hsl(210, 100%, 47%);
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-right: 20px
+}
+
+.active-pop{
+    scale: 1;
+    width: 100% ;
+    height: auto;
+    background-color: rgb(33, 33, 33,0.8);
+    position: absolute;
+    top: 40%;
+ 
+}
+
+.inactive-pop{
+    scale: 0;
+}
+
+#end-btn{
+    position: relative;
+    top: 20px;
+    right: 40%;
+    border: none;
+    outline: none;
     padding: 5px 10px;
-    background-color: blue;
+    border-radius: 50%;
+}
+
+.pop-container{
+    width: 75%;
+    height: 700px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    /* border: 1px solid red; */
+
+}
+
+.pop-c-left{
+    width: 50%;
+    height: 100%;
+    /* background-color: aliceblue */
+}
+.pop-c-right{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(240, 255, 250);
+}
+
+.carousel-control-next-icon:hover{
+   color: rgb(32, 30, 30);
 }
