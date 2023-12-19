@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Navbar from './Navbar'
 import HomeContent from './HomeContent'
 import FlexWrapImgs from './FlexWrapImgs'
 import Slider from './Slider'
+import { AuthContext } from './Context/AuthContext'
+
 const Homepage = () => {
+
+  const {state} = useContext(AuthContext)
+
+  // useEffect(()=>{
+  //   if(state){
+  //     toast.success('yeahh')
+  //   }
+  //   else{
+  //     toast.success("nahhhh!!")
+  //   }
+  // },[state])
   return (
     <div id='screen'>
       <Navbar />

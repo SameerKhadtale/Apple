@@ -1,10 +1,11 @@
 import UserModal from "../Modals/User.modal.js"
 import bcrypt from 'bcrypt'
+import  Jwt  from "jsonwebtoken"
 
 
 export const Login = async(req , res)=>{
    try{
-    const {email , password }=req.body 
+    const {email , password }=req.body.userData 
 
     if(!email || !password)return res.status(400).json({success :false , message:'email password required'})
     const user = await UserModal.findOne({email})
@@ -14,8 +15,11 @@ export const Login = async(req , res)=>{
     const checkUser =await bcrypt.compare(password , user.password)
     if(!checkUser)return res.status(400).json({success :false , message:'incorrect password'})
 
+    const token =await Jwt.sign({id:user._id},process.env.JWT_SECRET )
+    console.log(token)
+
    if(checkUser){
-    return res.status(200).json({success:true , message:"login successful"})
+    return res.status(200).json({success:true , message:"login successful",user : {name :user.name , id : user._id},token})
    }
    }
    catch(error){
@@ -26,7 +30,7 @@ export const Login = async(req , res)=>{
 
 export const Register = async(req , res)=>{
     try{
-        const {email , name , password} = req.body
+        const {email , name , password} = req.body.userData
 
         if(!name || !email || !password)return res.status(400).json({success :false , message:'all fields required'})
 
@@ -44,6 +48,27 @@ export const Register = async(req , res)=>{
 
     } catch(error){
     console.log(error)
-    return res.status(500).json({success:true , message:error})
+    return res.status(500).json({success:false, message:error})
+   }
+}
+
+export const CurrentUser = async(req , res)=>{
+    try{
+        const {token} = req.body
+
+        if (!token) return res.status(401).json({ success: false, message: "Token is required." })
+
+        const {id} =await Jwt.verify(token , process.env.JWT_SECRET)
+        console.log(id)
+        
+        const user = await UserModal.findById(id)
+        if(!user)return res.status(401).json({ success: false, message: "User not found." })
+      
+        return res.status(200).json({success:true , message:"successful", user: { name: user.name, id: user._id } })
+
+
+    } catch(error){
+    console.log(error)
+    return res.status(500).json({success:false , message:"unsuccessful"})
    }
 }

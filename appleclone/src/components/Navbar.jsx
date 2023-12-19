@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from './Context/AuthContext'
 const Navbar = () => {
   const navigate = useNavigate()
   const [shoppingClick, SetShoppingClick] = useState(false)
@@ -9,6 +10,10 @@ const Navbar = () => {
   }
 
   const shoppingClassName = shoppingClick ? 'Active-shopping' : 'inActive-shopping'
+
+  const {state ,Logout} = useContext(AuthContext)
+
+
   return (
     <>
     <nav className='navbar'>
@@ -35,12 +40,14 @@ const Navbar = () => {
     <div className={shoppingClassName}>
         <div className="shopping-cart-content">
           <h3>Your Bag is empty</h3>
-          <p style={{marginTop:'15px' ,fontSize:'12px'}}><span style={{color:'rgb(128, 128, 248)',textDecoration:'underline'}}>signin</span> to see if you have any saved items</p>
+          {state?.user?.name ? <div> <h4>welcome {state?.user?.name} !</h4> </div> :  <p style={{marginTop:'15px' ,fontSize:'12px'}}><span onClick={()=> navigate('/signin')} style={{color:'rgb(128, 128, 248)',textDecoration:'underline'}}>signin</span> to see if you have any saved items</p> }
+         
           <h6>My Profile</h6>
           <div className="profile-list"><i className="fa-solid fa-box"></i> Orders</div>
           <div className="profile-list"><i className="fa-regular fa-bookmark"></i> Your Saves</div>
           <div className="profile-list"><i className="fa-solid fa-circle-radiation"></i> Account</div>
-          <div className="profile-list" onClick={()=> navigate('/signin')}><i className="fa-regular fa-circle-user"></i> Signin</div>
+          {state?.user?.name ? <div onClick={()=>Logout()}>Logout</div> :  <div className="profile-list" onClick={()=> navigate('/signin')}><i className="fa-regular fa-circle-user"></i> Signin</div> }
+          {/* <div className="profile-list" onClick={()=> navigate('/signin')}><i className="fa-regular fa-circle-user"></i> Signin</div> */}
         </div>
       </div>
     </>
