@@ -16,6 +16,6 @@ app.get('/',function(req ,res){
 })
 
 app.use('/api/v1',router)
-
+// const mongoose = require ('mongoose');
 mongoose.connect(process.env.MONGOURL).then(console.log("mongodb connected"))
 app.listen(process.env.PORT,()=>{console.log(`server created on port no. -${process.env.PORT} `)})
